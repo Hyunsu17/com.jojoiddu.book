@@ -19,7 +19,6 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-
 group 'org.example'
 version '1.0-SNAPSHOT'
 sourceCompatibility=1.8
@@ -27,21 +26,23 @@ sourceCompatibility=1.8
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
     compile('org.projectlombok:lombok')
 
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('com.h2database:h2')
+
+
     compile('org.springframework.boot:spring-boot-starter-mustache')
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+
+    compile('org.springframework.session:spring-session-jdbc')
+    testCompile("org.springframework.security:spring-security-test")
+    // 스프링부트의 세션 정보를 db에 연결해주는 의존성(jdbc는 자바와 db를 연결하는 API)
+
 
 }
 
 repositories {
     mavenCentral()
     jcenter()
-}
-
-test {
-    useJUnitPlatform()
 }
