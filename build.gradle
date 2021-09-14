@@ -37,6 +37,9 @@ dependencies {
 
     compile('org.springframework.session:spring-session-jdbc')
     testCompile("org.springframework.security:spring-security-test")
+
+    compile("org.mariadb.jdbc:mariadb-java-client")
+
     // 스프링부트의 세션 정보를 db에 연결해주는 의존성(jdbc는 자바와 db를 연결하는 API)
 
 
