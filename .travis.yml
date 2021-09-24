@@ -21,7 +21,7 @@ before_deploy:
 
 deploy:
   - provider: s3
-    access_key_id: $AWS_ACCESS_KEY # Travis repo setting에서 설정한 값
+    access_key_id: $AWS_ACCESS_KEY # Travis repo setting에서 설정한 값33
     secret_access_key: $AWS_SECRET_KEY # Travis repo setting에서 설정한 값
     bucket: khs-freelec-springboot-build
     region: ap-northeast-2
