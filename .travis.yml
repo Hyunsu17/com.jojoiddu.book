@@ -31,7 +31,7 @@ deploy:
     wait-until-deployed: true
     on:
       all_branches: true
-  -provider: codedeploy
+  - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY # Travis repo setting에서 설정한 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo setting에서 설정한 값
     bucket: khs-freelec-springboot-build # s3 버켓
