@@ -20,6 +20,8 @@ else
   sleep 5
 fi
 
+pgrep -f $PROJECT_NAME.*.jar
+
 echo "> 새 애플리케이션 배포"
 
 JAR_NAME=$(ls -tr $REPOSITORY/*.jar |tail -n 1)
